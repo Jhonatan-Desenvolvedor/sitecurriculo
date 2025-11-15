@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Garante que padding e borda sejam incluídos na largura/altura total do elemento */
+}
+
+.titulodev {
+    background: black;
+    color: white;
+    box-shadow: 5px 5px 10px black;
+    height: 100%;
+    /* altura do bloco */
+}
+
+.titulodev h1:hover {
+    transform: scale(1.1);
+}
+
+.titulodev h1 {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 10vh;
+    /* altura */
+    font-size: 38px;
+    /* tamanho da fonte */
+}
+
+.titulofront {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meusdados {
+    color: white;
+    padding: 3%;
+
+}
+
+.meusdados h1 {
+    display: flex;
+    font-size: 38px;
+    /* tamanho da fonte */
+    justify-content: center;
+
+}
+
+.meusdados p {
+    display: flex;
+    font-size: 20px;
+    /* tamanho da fonte */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.secdados {
+    background: url(imagens/backgroundtitulo.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+
+}
+
+.secprog {
+    background: url(imagens/background2.jpg) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.navbar {
+    position: sticky;
+    /* Faz o menu "grudar" quando chegar no topo da tela ao rolar */
+    top: 20px;
+    /* Quando grudar, ele fica a 20px de distância do topo da janela */
+    right: 20px;
+    /* Alinha o menu a 20px da borda direita da tela */
+    background: #79224d;
+    /* Cor de fundo vinho elegante */
+    padding: 0px 0px;
+    /* Espaço interno (vertical 12px, horizontal 25px) → deixa mais confortável */
+    border-radius: 10px;
+    /* Cantos bem arredondados → visual de "botão flutuante" moderno */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* Garante que o menu fique sempre acima de todos os outros elementos */
+    float: right;
+}
+
+.navbar ul {
+    display: flex;
+    /* Coloca os itens do menu na horizontal (lado a lado) */
+    gap: 20px;
+    /* Espaço de 30px entre cada link (PERFIL e TECNOLOGIAS) */
+    list-style: none;
+    /* Remove os marcadores padrão da lista (<ul>) */
+    margin: 0;
+    /* Remove margem padrão do navegador */
+    padding: 0;
+    /* Remove padding padrão do navegador */
+}
+
+.navbar li {
+    display: inline-block;
+    /* Garante que os <li> respeitem o flex e fiquem na linha (redundante com flex, mas seguro) */
+}
+
+.navbar a {
+    color: white;
+    /* Cor do texto dos links = branco */
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links */
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+    font-size: 1.2rem;
+    /* Tamanho da fonte um pouco maior (1.2 × tamanho base) */
+    padding: 10px 20px;
+    /* Espaço interno nos links → área de clique maior e mais bonita */
+    border-radius: 8px;
+    /* Cantos levemente arredondados nos links */
+    transition: all 0.3s ease;
+    /* Animação suave em todas as propriedades ao passar o mouse */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    /* Fundo branco semi-transparente ao passar o mouse */
+    transform: translateY(-3px);
+    /* Levanta o link 3 pixels para cima → efeito de "levantar" */
+}
+
+.container {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: inline-block;
+}
+
+
+.container:hover .flip {
+    transform: rotateY(180deg);
+}
+
+.divdados{
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaço entre os elementos */
+    align-items: center;
+    height: 40vh; /* Ou outra altura */    
+}
+
+.imgdados img{
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+}
+.imgdados .meusdados{
+    width: 48%; /* Garante que caibam lado a lado */
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.flip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.frente,
+.tras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    backface-visibility: hidden;
+}
+
+.frente {
+    background-size: 100%;
+}
+
+.tras {
+    background-color: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    text-align: inherit;
+}
