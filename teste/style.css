@@ -1,5 +1,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: url(imagens/backgroundtitulo.jpg) no-repeat;
+    background-size: cover;
+    /* Faz a imagem cobrir a tela inteira */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
+    background-position: center center;
 
 }
 
@@ -42,53 +48,71 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px;
+    font-size: 50px;
 }
 
 .tituloback {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px;
+    font-size: 50px;
 }
 
-.meusdados {
-    color: white;
-    padding: 3%;
+.meusobjetivos {
+    background-color: lightgray;    
+    justify-content: center;    
+    /* Espaço entre os elementos */
+    align-items: center;
+    margin: auto;
+    height: 34vh;
+    /* altura da div*/
+    width: 90%;
+    /* Largura da div */
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    
+}
 
+.meusobjetivos h1  {    
+    font-size: 38px;
+    /* tamanho da fonte */    
+    text-align: center;
+    padding: 20px;
+}
+
+.meusobjetivos p  {
+    font-size: 20px;
+    /* tamanho da fonte */     
+    text-align: center;
+}
+
+.meusdados {    
+    margin: auto;
+    
 }
 
 .meusdados h1 {
-    display: flex;
-    font-size: 38px;
-    /* tamanho da fonte */
-    justify-content: center;
-
+    font-size: 20px;
+    /* tamanho da fonte */     
+    text-align: center;
 }
 
 .meusdados p {
-    display: flex;
     font-size: 20px;
-    /* tamanho da fonte */
-    display: flex;
-    justify-content: center;
+    /* tamanho da fonte */     
     text-align: center;
 }
 
 .secdados {
-    background: url(imagens/backgroundtitulo.jpg) center center no-repeat;
-    background-size: cover;
-    height: 100vh;
     width: 100vw;
-
-
+    height: 100vh;
 }
 
 .secprog {
-    background: url(imagens/background2.jpg) center center no-repeat;
-    background-size: cover;
     text-align: center;
-    height: 100vh;
     width: 100vw;
-
+    height: 100vh;
 }
 
 .navbar {
@@ -164,23 +188,44 @@ html {
     transform: rotateY(180deg);
 }
 
-.divdados{
+.divdados {
+    background-color: lightgray;
     display: flex;
     justify-content: center;
-    gap: 50px; /* Espaço entre os elementos */
+    gap: 5px;
+    /* Espaço entre os elementos */
     align-items: center;
-    height: 40vh; /* Ou outra altura */    
+    margin: auto;
+    height: 40vh;
+    /* altura da div*/
+    width: 90%;
+    /* Largura da div */
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
 }
 
-.imgdados img{
+.imgdados {
+    margin: auto;
+}
+
+.imgdados img {
     border-radius: 20px;
     width: 250px;
     height: 250px;
+    
 }
-.imgdados .meusdados{
-    width: 48%; /* Garante que caibam lado a lado */
-    background-color: lightblue;
-    padding: 10px;
+
+
+
+.divisao1 {
+    background-color: rgba(0, 0, 0, 0);
+    height: 110px;
+    width: 100%;
+}
+
+.divisao2 {
+    background-color: rgb(0, 0, 0);
+    height: 300px;
+    width: 100%;
 }
 
 .flip {
